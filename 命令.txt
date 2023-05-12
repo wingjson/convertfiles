@@ -1,0 +1,32 @@
+PDF处理
+
+翻译解密
+    命令： ./dealpdf.exe --convert --input E:/常用工具/go/dealpdf/1.pdf   
+    文件翻译解密后输出目录： E:/常用工具/go/convertdecrypt/1.pdf  
+
+格式转换解密
+    命令： ./dealpdf.exe --input E:/常用工具/go/dealpdf/1.pdf
+    文件翻译解密后输出： E:/常用工具/go/transdecrypt/1.pdf
+
+pdf分割（pageslen   每隔几页进行分割）
+    命令 ： ./dealpdf.exe --split --pageslen 3 --input E:/常用工具/go/decryptPDF/dealpdf/3.pdf
+    分割后输出目录 ：E:/常用工具/go/decryptPDF/split/   命名规则 output1-3.pdf   output4-5.pdf
+
+
+pdf提取指定页（pageslen   1-3  如果多个页面提取，（用逗号分开 如1-2,4-5 代表提取1，2，4，5页））
+    命令 ： ./dealpdf.exe --getpages --pageslen 1-3 --input E:/常用工具/go/decryptPDF/dealpdf/3.pdf
+    提取后目录：E:/常用工具/go/decryptPDF/getpages/3.pdf
+
+
+pdf合并：
+    命令:  ./dealpdf.exe --merge --input E:/常用工具/go/decryptPDF/dealpdf/3.pdf E:/常用工具/go/decryptPDF/dealpdf/5.pdf E:/常用工具/go/decryptPDF/dealpdf/4.pdf
+    提取后目录：E:/常用工具/go/decryptPDF/merge/3.pdf
+
+
+文档转换
+    依赖：
+    windows下需安装libreoffice  把路径加入环境变量D:\soft\libreoffice\program
+    下载mupdf ,把路径加入系统变量
+
+    命令 ：./convert.exe --convert E:/常用工具/go/convert/test.docx
+    输出目录 ： E:/常用工具/go/docx       文件夹名词以文件后缀命名
